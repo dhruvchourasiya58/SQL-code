@@ -17,7 +17,7 @@ select continent from country;
 select * from country;
 
 -- select => coloumn ko access krna ho tb use krte h 
--- you can write a query (logic) in any case fromate
+-- you can write a query (logic) in any case fromat
 -- you can give a column name using 'as' keyword
 
 select * from country where population = '156483000';
@@ -38,11 +38,11 @@ select * from city where population in(129170, 117196);
 
 -- ' like ' operator
 
-select * from city where name like '%ba%'; -- '%' keyword mtkb kitne bhi charactor ho skte h 
+select * from city where name like '%ba%'; -- '%' keyword mtlb kitne bhi charactor ho skte h 
 
 -- "_" operator
 
-select * from city where name like 'T__'; -- ' _ ' mtlb only one charccte rya agr khi 2 '__' h to wha fix 2 charactor
+select * from city where name like 'T__'; -- ' _ ' mtlb only one charactor ya agr khi 2 '__' h to wha fix 2 charactor
 
 select * from city where name like '%e%';
 select * from city where name like '%_b_';
@@ -55,11 +55,12 @@ select name from country where name like '_%E_E%_';
 -- string, number, dates
 use world;
 select name, continent, concat(continent, 'have' ,name, 'country') from country; -- y space nhi de rha bich me
-select name, continent, concat_ws(' ', continent, 'have' ,name, 'country') from country; -- concat_ws(' ') iss trh se y keyword or sace dene se y bich me space de dega 
+select name, continent, concat_ws(' ', continent, 'have' ,name, 'country') from country; -- concat_ws(' ') iss trh se y keyword me function k andr space dene se y bich me space de dega 
 
 -- substr function
 select name, upper(name), substr(name,2) from country; -- extract string character
-select name, upper(name), substr(name,2,4) from country; -- substr(name,2,4) isme output second charcter se start hokr 4th charactor tk data deta h
+select name, upper(name), substr(name,2,4) from country; -- substr(name,2,4) isme output second charactor se start hokr 4th charactor tk data deta h
+
 -- example
 
 select name, substr(name, -4) from country where name = 'colombia';
